@@ -34,10 +34,10 @@ const head_item = [
   <table>
     <tbody>
       <tr>
-        <td className={standingsStyle.gold}>Gold</td>
-        <td className={standingsStyle.silver}>Silver</td>
-        <td className={standingsStyle.bronze}>Bronze</td>
-        <td className={standingsStyle.honorable}>Honorable</td>
+        {/*<td className={standingsStyle.gold}>Gold</td>*/}
+        {/*<td className={standingsStyle.silver}>Silver</td>*/}
+        {/*<td className={standingsStyle.bronze}>Bronze</td>*/}
+        {/*<td className={standingsStyle.honorable}>Honorable</td>*/}
         <td className={standingsStyle.firstsolve}>First to solve problem</td>
         <td className={standingsStyle.correct}>Solved problem</td>
         <td className={standingsStyle.incorrect}>Attempted problem</td>

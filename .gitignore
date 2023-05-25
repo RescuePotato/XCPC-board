@@ -19,3 +19,7 @@
 /.env.local
 
 *.less.d.ts
+
+public/data/
+
+.idea/

@@ -4,26 +4,10 @@
 <head>
   <meta charSet="utf-8" />
   <script>
-    function normalizePath(path) {
-        while (path.endsWith("/")) path = path.slice(0, -1);
-        return path + "/";
-    }
-
-    var dataHost;
-    try {
-        dataHost = __DATA_HOST__;
-    } catch (e) {
-        dataHost = "/data/";
-    }
-    dataHost = normalizePath(dataHost);
+    const dataHost = "./data/";
     window.dataHost = dataHost;
 
-    var title;
-    try {
-        title = __DEFAULT_TITLE__;
-    } catch (e) {
-        title = "Board - XCPCIO";
-    }
+    const title = "Ranklist - THUPC2023";
     window.title = title;
     document.title = title;
   </script>
@@ -31,47 +15,6 @@
 
 <body>
   <noscript>You need to enable JavaScript to run this app.</noscript>
-  <script>
-    try {
-        var baiduAnalyticsId = __BAIDU_ANALYTICS_ID__;
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = `https://hm.baidu.com/hm.js?${baiduAnalyticsId}`;
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    } catch (e) {}
-
-    try {
-        var googleAnalyticsId = __GOOGLE_ANALYTICS_ID__;
-        (function () {
-            if (!location.port) {
-                (function (i, s, o, g, r, a, m) {
-                    i["GoogleAnalyticsObject"] = r;
-                    (i[r] =
-                    i[r] ||
-                    function () {
-                        (i[r].q = i[r].q || []).push(arguments);
-                    }),
-                    (i[r].l = 1 * new Date());
-                    (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m);
-                })(
-                    window,
-                    document,
-                    "script",
-                    "//www.google-analytics.com/analytics.js",
-                    "ga"
-                );
-                ga("create", `${googleAnalyticsId}`, "auto");
-                ga("send", "pageview");
-            }
-        })();
-    } catch (e) {}
-  </script>
   <center>
     <div id="root"></div>
   </center>

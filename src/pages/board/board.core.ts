@@ -14,18 +14,16 @@ export const fetchIntervalTime = 30 * 1000;
 export const INF = 0x3f3f3f3f;
 
 export async function fetchData() {
-  const pathname = window.location.pathname;
-
   let contest_config: any = await getJSON(
-    [pathname, `config.json?t=${getNowTimeStamp()}`].join("/"),
+    `config.json?t=${getNowTimeStamp()}`
   );
 
   let team: any = await getJSON(
-    [pathname, `team.json?t=${getNowTimeStamp()}`].join("/"),
+    `team.json?t=${getNowTimeStamp()}`
   );
 
   let _run: any = await getJSON(
-    [pathname, `run.json?t=${getNowTimeStamp()}`].join("/"),
+    `run.json?t=${getNowTimeStamp()}`
   );
 
   let run: Run[] = [];
@@ -66,7 +64,7 @@ export async function fetchData() {
 }
 
 export function getMenu(contest_config: any) {
-  const type_ = ["排行榜", "发气球", "统计分析", "导出榜单"];
+  const type_ = ["排行榜", "发气球", "统计分析" /*, "导出榜单"*/ ];
   const group_ = ["所有队伍", "关注队伍"];
   const fgroup_ = ["all", "filter"];
 
