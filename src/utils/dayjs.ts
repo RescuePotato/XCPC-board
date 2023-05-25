@@ -52,6 +52,9 @@ export function getTimeDiff(seconds: number): string {
     return String(a);
   };
 
+  if(seconds < 0)
+    return "-" + getTimeDiff(-seconds);
+
   const h = Math.floor(seconds / 3600);
   const m = Math.floor((seconds % 3600) / 60);
   const s = seconds % 60;
